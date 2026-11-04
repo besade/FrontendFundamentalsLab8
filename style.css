@@ -42,15 +42,15 @@ img {
 }
 
 .topbar {
-  min-height: 38px;
+  min-height: 42px;
   background: #f7f9f8;
   border-bottom: 1px solid #f0f0f0;
   color: var(--green);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .topbar-inner {
-  min-height: 38px;
+  min-height: 42px;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -81,20 +81,20 @@ img {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 11px;
+  font-size: 13px;
   white-space: nowrap;
   min-height: 36px;
 }
 
 .login {
   gap: 6px;
-  padding: 0 18px;
+  padding: 0 36px;
   color: var(--green);
   background: #ffffff;
 }
 
 .register {
-  padding: 0 24px;
+  padding: 0 36px;
   color: #ffffff;
   background: var(--green);
 }
@@ -102,9 +102,9 @@ img {
 .nav-row {
   min-height: 64px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-columns: auto auto 1fr;
   align-items: center;
-  gap: 24px;
+  column-gap: clamp(36px, 4vw, 71px);
 }
 
 .brand {
@@ -140,14 +140,14 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  justify-self: center;
-  gap: 24px;
+  justify-content: flex-start;
+  justify-self: start;
+  gap: clamp(30px, 2.5vw, 46px);
 }
 
 .main-nav a {
   color: var(--muted);
-  font-size: 12px;
+  font-size: clamp(13px, 1.05vw, 15px);
   text-decoration: none;
 }
 
@@ -163,14 +163,14 @@ img {
 }
 
 .socials a {
-  width: 23px;
-  height: 23px;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
-  border-radius: 1px;
+  border-radius: 2px;
   background: var(--green);
   color: #ffffff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   text-decoration: none;
 }
@@ -271,6 +271,15 @@ img {
   padding: 0 20px 22px;
   border: 1px solid #f0f0f0;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-card .green-button {
+  margin-top: auto;
+  align-self: center;
 }
 
 .feature-icon {
@@ -498,8 +507,33 @@ img {
 }
 
 @media (max-width: 1000px) {
+
+  .topbar-inner {
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  .top-info {
+    flex: 1 1 auto;
+    min-width: 0;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 6px 14px;
+  }
+
+  .top-actions {
+    flex-shrink: 0;
+  }
+
+  .login,
+  .register {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .nav-row {
     grid-template-columns: 1fr auto;
+    column-gap: 16px;
     row-gap: 10px;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -518,12 +552,14 @@ img {
     grid-column: 1 / -1;
     grid-row: 2;
     justify-self: center;
-    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px clamp(30px, 2.5vw, 50px);
   }
 
   .features,
   .course-grid {
-    gap: 16px;
+    gap: 12px;
   }
 
   .course-image {
@@ -574,17 +610,21 @@ img {
   }
 
   .main-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
     flex-wrap: wrap;
-    gap: 10px 16px;
+    justify-content: center;
+    gap: 10px 18px;
   }
 
   .main-nav a {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .socials a {
-    width: 21px;
-    height: 21px;
+    width: 32px;
+    height: 32px;
   }
 
   .hero {
