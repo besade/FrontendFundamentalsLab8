@@ -222,6 +222,7 @@ img {
   font-size: 27px;
   line-height: 1;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .slide-arrow.prev {
@@ -316,6 +317,7 @@ img {
   font-weight: 600;
   line-height: 1.25;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .courses {
@@ -444,6 +446,7 @@ img {
   color: #777777;
   font-family: inherit;
   font-size: 19px;
+  cursor: pointer;
 }
 
 .dot {
