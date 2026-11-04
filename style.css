@@ -380,7 +380,7 @@ img {
   padding: 20px 12px;
   background: var(--green);
   color: #ffffff;
-  font-size: 11px;
+  font-size: 15px;
 }
 
 .price {
@@ -548,6 +548,10 @@ img {
     grid-row: 1;
   }
 
+  .hero {
+    height: clamp(750px, 31vw, 800px);
+  }
+
   .hero h1 {
   font-size: clamp(62px, 4.2vw, 84px);
   }
@@ -632,7 +636,7 @@ img {
   }
 
   .hero {
-    height: clamp(350px, 62vw, 480px);
+    height: clamp(670px, 62vw, 700px);
   }
 
   .hero h1 {
